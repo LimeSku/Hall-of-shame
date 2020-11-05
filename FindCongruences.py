@@ -1,4 +1,6 @@
 
+banner = """This little script help you to find some congruences in a given interval. This can be helpful when you're working with very large integer."""
+
 def exp_res(c):
     export = input("Export results in txt file ? y/n ")
     if export == "y" or export == "Y":
@@ -29,8 +31,8 @@ def congru(a,b):
         exp_res(c)
 
     else:
-        pal = [x for x in pol]
-        del pal[1]
+        pal = pol.split("-")
+        print(pal)
         min,max = int(pal[0]),int(pal[1])
         c = []
         for x in range(min,max):
@@ -39,6 +41,7 @@ def congru(a,b):
                 print(a,"≡",b,"modulo",x)
         exp_res(c)
 
-print("This little script help you to find some congruences in a given interval. This can be helpful when you're working with very large integer.")
-a,b = int(input("a : ")),int(input("b : "))
-congru(a,b)
+if __name__ == "__main__":
+    print(banner)
+    a,b = int(input("a : ")),int(input("b : "))
+    congru(a,b)
