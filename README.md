@@ -1,2 +1,2 @@
-# TinyProjects
-This repo is like a folder where i put some of my scripts, tiny projects, and ideas.
+# Hall of shame
+Trash repository.
